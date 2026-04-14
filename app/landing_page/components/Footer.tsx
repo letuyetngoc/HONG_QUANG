@@ -5,12 +5,12 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: '#001E50', color: 'white', pt: 10, pb: 4 }}>
+    <Box sx={{ bgcolor: '#001E50', color: 'white', pt: 10, pb: 4 }} id="contact">
       <Container maxWidth="lg">
         <Grid container spacing={6} sx={{ alignItems: 'center' }}>
           <Grid size={{ xs: 12, md: 4 }}>
             <Typography variant="h5" sx={{ fontWeight: 700 }} gutterBottom>
-              MECH<span style={{ color: '#F4A261' }}>VINA</span>
+              HỒNG<span style={{ color: '#F4A261' }}> {" "}QUANG</span>
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8, mb: 3, lineHeight: 1.8 }}>
               Giải pháp toàn diện về gia công cơ khí, cắt CNC, và chế tạo máy công nghiệp với chất lượng hàng đầu và dịch vụ uy tín.
@@ -29,15 +29,16 @@ const Footer = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
                 <MapPin size={20} color="#F4A261" />
-                <Typography variant="body2" sx={{ opacity: 0.8 }}>Khu Công Nghiệp VSIP, Thành phố ABC, Việt Nam</Typography>
+                <Typography variant="body2" sx={{ opacity: 0.8 }}>50 Cao Đức Lân, Phường Bình Trưng, Thành phố Hồ Chí Minh,
+                  Việt Nam</Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
                 <Phone size={20} color="#F4A261" />
-                <Typography variant="body2" sx={{ opacity: 0.8 }}>+84 (0) 123 456 789</Typography>
+                <Typography variant="body2" sx={{ opacity: 0.8 }}>0704051039</Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
                 <Mail size={20} color="#F4A261" />
-                <Typography variant="body2" sx={{ opacity: 0.8 }}>contact@mechvina.com.vn</Typography>
+                <Typography variant="body2" sx={{ opacity: 0.8 }}>quangngoccn.cdt@gmail.com</Typography>
               </Box>
             </Box>
           </Grid>
@@ -47,11 +48,11 @@ const Footer = () => {
               Liên kết nhanh
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mt: 3 }}>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Về Chúng Tôi</Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dịch Vụ Gia Công</Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dự Án</Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Tin Tức & Tuyển Dụng</Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Liên Hệ</Link>
+              <Link href="#about" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Về Chúng Tôi</Link>
+              <Link href="#services" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dịch Vụ Gia Công</Link>
+              <Link href="#projects" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dự Án</Link>
+              <Link href="#news" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Tin Tức & Tuyển Dụng</Link>
+              <Link href="#contact" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Liên Hệ</Link>
             </Box>
           </Grid>
         </Grid>
