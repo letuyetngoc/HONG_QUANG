@@ -2,6 +2,7 @@
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
 import { ArrowRight, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
+import theme from '@/theme/theme';
 
 const Hero = () => {
   return (
@@ -26,14 +27,14 @@ const Hero = () => {
           sx={{ maxWidth: '700px' }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
-            <Settings size={24} color="#F4A261" />
+            <Settings size={24} color="primary" />
             <Typography variant="subtitle1" sx={{ fontWeight: 700 }} color="secondary">
               ĐỈNH CAO CHẤT LƯỢNG GIA CÔNG
             </Typography>
           </Box>
           <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 800, lineHeight: 1.2 }}>
             Giải Pháp Cơ Khí <br />
-            <span style={{ color: '#F4A261' }}>Toàn Diện & Chuẩn Xác</span>
+            <span style={{ color: theme.palette.primary.main }}>Toàn Diện & Chuẩn Xác</span>
           </Typography>
           <Typography variant="h6" sx={{ mb: 4, fontWeight: 400, opacity: 0.9, lineHeight: 1.6 }}>
             Với hệ thống nhà xưởng hiện đại và đội ngũ kỹ sư &gt;15 năm kinh nghiệm.

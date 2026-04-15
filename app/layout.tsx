@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mechanical Machinery | Năng lực Gia công",
-  description: "Trang thông tin năng lực gia công cơ khí cấu trúc và chế tạo thiết bị.",
+  title: "HONG QUANG INNOVATION AND TECHNOLOGY COMPANY LIMITED",
+  description: "Trang thông tin công ty TNHH Công nghệ Sáng tạo Hồng Quang",
 };
 
 export default function RootLayout({
