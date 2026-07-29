@@ -1,16 +1,18 @@
 'use client';
-import { Box, Container, Typography, Grid, Link, IconButton, Divider } from '@mui/material';
+import { Box, Container, Typography, Grid, Link, IconButton, Divider, Stack } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { Facebook, Twitter, LinkedIn } from '@mui/icons-material';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
+  const theme = useTheme();
   return (
-    <Box sx={{ bgcolor: '#001E50', color: 'white', pt: 10, pb: 4 }}>
+    <Box sx={{ bgcolor: 'primary.dark', color: 'white', pt: 10, pb: 4 }}>
       <Container maxWidth="lg">
         <Grid container spacing={6} sx={{ alignItems: 'center' }}>
           <Grid size={{ xs: 12, md: 4 }}>
             <Typography variant="h5" sx={{ fontWeight: 700 }} gutterBottom>
-              MECH<span style={{ color: '#F4A261' }}>VINA</span>
+              HỒNG<span style={{ color: theme.palette.secondary.main }}>&nbsp;QUANG</span>
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8, mb: 3, lineHeight: 1.8 }}>
               Giải pháp toàn diện về gia công cơ khí, cắt CNC, và chế tạo máy công nghiệp với chất lượng hàng đầu và dịch vụ uy tín.
@@ -28,15 +30,15 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'flex-start' }}>
-                <MapPin size={20} color="#F4A261" />
+                <MapPin size={20} color={theme.palette.secondary.main} />
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>Khu Công Nghiệp VSIP, Thành phố ABC, Việt Nam</Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                <Phone size={20} color="#F4A261" />
+                <Phone size={20} color={theme.palette.secondary.main} />
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>+84 (0) 123 456 789</Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                <Mail size={20} color="#F4A261" />
+                <Mail size={20} color={theme.palette.secondary.main} />
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>contact@mechvina.com.vn</Typography>
               </Box>
             </Box>
@@ -46,13 +48,12 @@ const Footer = () => {
             <Typography variant="h6" sx={{ fontWeight: 700 }} gutterBottom>
               Liên kết nhanh
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mt: 3 }}>
+            <Stack sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mt: 3 }}>
               <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Về Chúng Tôi</Link>
               <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dịch Vụ Gia Công</Link>
               <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Dự Án</Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Tin Tức & Tuyển Dụng</Link>
               <Link href="#" color="inherit" underline="hover" sx={{ opacity: 0.8 }}>Liên Hệ</Link>
-            </Box>
+            </Stack>
           </Grid>
         </Grid>
 

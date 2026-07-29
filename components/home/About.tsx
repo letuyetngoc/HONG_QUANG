@@ -1,5 +1,6 @@
 'use client';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -11,6 +12,7 @@ const features = [
 ];
 
 const About = () => {
+  const theme = useTheme();
   return (
     <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.default' }} id="about">
       <Container maxWidth="lg">
@@ -30,7 +32,7 @@ const About = () => {
                 Đối Tác Đáng Tin Cậy Tiên Phong Công Nghệ Nhất
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 4, lineHeight: 1.8 }}>
-                MechVina được thành lập với mục tiêu trở thành một trong những nhà máy chế tạo cơ khí hàng đầu khu vực.
+                Hồng Quang được thành lập với mục tiêu trở thành một trong những nhà máy chế tạo cơ khí hàng đầu khu vực.
                 Chúng tôi chuyên cung cấp dịch vụ gia công chính xác, thiết kế và chế tạo máy móc tiêu chuẩn quốc tế cho các khu công nghiệp, doanh nghiệp FDI.
               </Typography>
 
@@ -38,7 +40,7 @@ const About = () => {
                 {features.map((feature, index) => (
                   <Grid size={{ xs: 12, sm: 6 }} key={index}>
                     <Box sx={{ display: 'flex', gap: 1.5, alignItems: 'flex-start' }}>
-                      <CheckCircle2 color="#00509E" size={24} style={{ flexShrink: 0 }} />
+                      <CheckCircle2 color={theme.palette.primary.main} size={24} style={{ flexShrink: 0 }} />
                       <Typography variant="body2" sx={{ fontWeight: 700, opacity: 0.8 }} color="text.primary">
                         {feature}
                       </Typography>

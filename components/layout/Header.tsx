@@ -1,9 +1,12 @@
 'use client';
 import { AppBar, Toolbar, Typography, Button, Box, Container, IconButton } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { Menu as MenuIcon } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
+  const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -20,8 +23,8 @@ const Header = () => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={Link}
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -33,7 +36,7 @@ const Header = () => {
               flexGrow: 1
             }}
           >
-            HỒNG QUANG
+            HỒNG<span style={{ color: theme.palette.secondary.main }}>&nbsp;QUANG</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -51,8 +54,8 @@ const Header = () => {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
+            component={Link}
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -64,7 +67,7 @@ const Header = () => {
               textDecoration: 'none',
             }}
           >
-            MECH<span style={{ color: '#F4A261' }}>VINA</span>
+            HỒNG<span style={{ color: theme.palette.secondary.main }}>&nbsp;QUANG</span>
           </Typography>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, mr: 3 }}>

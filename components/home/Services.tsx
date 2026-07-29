@@ -1,5 +1,6 @@
 'use client';
 import { Box, Container, Typography, Grid, Card, CardContent, IconButton } from '@mui/material';
+import { alpha } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { Settings, PenTool, Scissors, Wrench, Layers, Combine } from 'lucide-react';
 
@@ -45,7 +46,7 @@ const Services = () => {
                     transition: 'all 0.3s ease',
                     '&:hover': {
                       borderColor: 'primary.main',
-                      boxShadow: '0 10px 30px rgba(0, 80, 158, 0.1)',
+                      boxShadow: (theme) => `0 10px 30px ${alpha(theme.palette.primary.main, 0.1)}`,
                       transform: 'translateY(-5px)'
                     }
                   }}
@@ -54,7 +55,7 @@ const Services = () => {
                     <IconButton
                       disableRipple
                       sx={{
-                        bgcolor: 'rgba(0, 80, 158, 0.1)',
+                        bgcolor: (theme) => alpha(theme.palette.primary.main, 0.1),
                         color: 'primary.main',
                         mb: 3,
                         pointerEvents: 'none'

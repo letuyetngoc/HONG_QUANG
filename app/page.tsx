@@ -1,12 +1,11 @@
-"use client";
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Services from '../components/Services';
-import Projects from '../components/Projects';
-import Statistics from '../components/Statistics';
-import Gallery from '../components/Gallery';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import Hero from '../components/home/Hero';
+import About from '../components/home/About';
+import Services from '../components/home/Services';
+import Projects from '../components/home/Projects';
+import Statistics from '../components/home/Statistics';
+import Gallery from '../components/home/Gallery';
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <About />
         <Services />
         <Projects />
-        <Statistics />
         <Gallery />
       </main>
       <Footer />
